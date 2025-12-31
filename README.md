@@ -11,19 +11,7 @@ RWKV-PEFT is the official implementation for efficient parameter fine-tuning of 
 ## Support [huggingface/PEFT](https://github.com/huggingface/peft)
 You only need to check the usage examples of different methods in **PEFT**, then input the corresponding **name** and **config** correctly 
 
-`LoRA:`
-```
---peft lora --peft_config '{"r":8,"lora_alpha":32,"lora_dropout":0.05}'
-```
-`MiSS:`
-```
---peft miss --peft_config '{"r":8}'
-```
-> [!IMPORTANT]
-> state tuning 
-```
---peft state --op fla
-```
+
 
 
 ## MiSS: Revisiting the Trade-off in LoRA with an Efficient Shard-Sharing Structure [Paper](https://arxiv.org/pdf/2409.15371)
@@ -32,16 +20,6 @@ You can easily use it within **PEFT** (you’ll still see “Bone” for now, bu
 
 
 
-# Installation
-
-> [!IMPORTANT]
-> Installation is mandatory.
-
-```bash
-git clone https://github.com/JL-er/RWKV-PEFT.git
-cd RWKV-PEFT
-uv sync   or  pip install .
-```
 
 ## Table of Contents
 - [Hardware Requirements](#hardware-requirements)
@@ -118,11 +96,7 @@ Note:
 pip install -r requirements.txt
 ```
 
-2. Run example script:
-```bash
-sh scripts/run_lora.sh
-```
-Note: Please refer to the RWKV official tutorial for detailed data preparation
+
 
 
 ## Main Features
@@ -170,12 +144,7 @@ Available strategies:
 - deepspeed_stage_2_offload
 - deepspeed_stage_3_offload
 
-###  FLA Operator
-By default, RWKV-PEFT uses custom CUDA kernels for wkv computation.
-However, you can use `--op fla` to enable the Triton kernel:
-```
---op fla
-```
+
 
 ## GPU Support
 
@@ -195,4 +164,5 @@ If you find this project helpful, please cite our work:
       archivePrefix={arXiv},
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2409.15371}, 
+
 }
