@@ -1,11 +1,11 @@
 
 <h1 align="center">
-  <p><img src="assert/logo.jpg" alt="RWKV-PEFT" width="60px"  style="vertical-align: middle; margin-right: 10px;"/>RWKV-PEFT</p>
+  <p><img src="assert/logo.jpg" alt="RWKV7-Statetuning" width="60px"  style="vertical-align: middle; margin-right: 10px;"/>RWKV-PEFT</p>
 </h1>
 
-\[ English | [中文](README_zh.md) \]
 
-RWKV-PEFT is the official implementation for efficient parameter fine-tuning of RWKV models, supporting various advanced fine-tuning methods across multiple hardware platforms.
+
+RWKV7-Statetuning is an implementation for efficient state-tuning of RWKV7 models.
 
 # Recent updates
 ## Support cuda state-tuning
@@ -136,6 +136,7 @@ If you find this project helpful, please cite our work:
       url={https://arxiv.org/abs/2409.15371}, 
 
 }
+
 
 
 
