@@ -8,9 +8,7 @@
 RWKV-PEFT is the official implementation for efficient parameter fine-tuning of RWKV models, supporting various advanced fine-tuning methods across multiple hardware platforms.
 
 # Recent updates
-## Support [huggingface/PEFT](https://github.com/huggingface/peft)
-You only need to check the usage examples of different methods in **PEFT**, then input the corresponding **name** and **config** correctly 
-
+## Support cuda state-tuning
 
 
 
@@ -92,8 +90,8 @@ Note:
 ## Quick Start
 
 1. Install dependencies:
-```bash
-pip install -r requirements.txt
+```python
+python state_tuning_train.py --action train --data data.jsonl
 ```
 
 
@@ -166,3 +164,4 @@ If you find this project helpful, please cite our work:
       url={https://arxiv.org/abs/2409.15371}, 
 
 }
+
