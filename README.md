@@ -95,26 +95,12 @@ python state_tuning_train.py --action train --data data.jsonl
 ## Main Features
 
 - **State-tuning Methods**: Supports LoRA, PISSA, Bone, State Tuning, etc.
-- **Quantized Training**: Supports INT8/NF4 quantization for significant VRAM reduction
 - **Memory Optimization**: Multiple DeepSpeed strategies available
 - **Loss Masking**: Supports loss masking for QA dialogue and padding
 - **Multi-Hardware Support**: RWKV-PEFT officially supports NVIDIA, AMD, Moore Threads, Musa, Iluvatar CoreX, and other hardware platforms. Ascend NPU implementation will be available later. Note: Currently we only support issues for NVIDIA hardware
 
 ## Detailed Configuration
 
-
-
-###  Quantized Training
-```bash
---quant int8/nf4
-```
-
-### Infinite Length Training (infctx)
-```bash
---train_type infctx --chunk_ctx 512 --ctx_len 2048
-```
-- ctx_len: Target training length
-- chunk_ctx: Slice length, must be smaller than ctx_len
 
 
 
@@ -150,5 +136,6 @@ If you find this project helpful, please cite our work:
       url={https://arxiv.org/abs/2409.15371}, 
 
 }
+
 
 
