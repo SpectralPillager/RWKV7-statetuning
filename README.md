@@ -12,11 +12,6 @@ RWKV-PEFT is the official implementation for efficient parameter fine-tuning of 
 
 
 
-## MiSS: Revisiting the Trade-off in LoRA with an Efficient Shard-Sharing Structure [Paper](https://arxiv.org/pdf/2409.15371)
-The method **Bone/DiSHA** has been officially renamed to **MiSS**.
-You can easily use it within **PEFT** (you’ll still see “Bone” for now, but it will be removed in future versions, so please use **MiSS** instead).
-
-
 
 
 ## Table of Contents
@@ -99,22 +94,13 @@ python state_tuning_train.py --action train --data data.jsonl
 
 ## Main Features
 
-- **Multiple Fine-tuning Methods**: Supports LoRA, PISSA, Bone, State Tuning, etc.
+- **State-tuning Methods**: Supports LoRA, PISSA, Bone, State Tuning, etc.
 - **Quantized Training**: Supports INT8/NF4 quantization for significant VRAM reduction
-- **Flexible Data Loading**: Supports various data sampling strategies 
 - **Memory Optimization**: Multiple DeepSpeed strategies available
 - **Loss Masking**: Supports loss masking for QA dialogue and padding
-- **Infinite Context Training**: Supports infctx training mode, utilizing RWKV's constant memory usage advantage to train with "infinite" context under limited resources
 - **Multi-Hardware Support**: RWKV-PEFT officially supports NVIDIA, AMD, Moore Threads, Musa, Iluvatar CoreX, and other hardware platforms. Ascend NPU implementation will be available later. Note: Currently we only support issues for NVIDIA hardware
-- **RWKV-FLA Efficient Training**: rwkv-fla is a Triton-based linear attention operator that can run efficiently on hardware without CUDA support
 
 ## Detailed Configuration
-
-###  PEFT Method Selection
-```bash
---peft lora --peft_config '{"r":8,"lora_alpha":32,"lora_dropout":0.05}'
-```
-[state,lora,miss]
 
 
 
@@ -164,4 +150,5 @@ If you find this project helpful, please cite our work:
       url={https://arxiv.org/abs/2409.15371}, 
 
 }
+
 
