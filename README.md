@@ -13,7 +13,6 @@ RWKV7-Statetuning is an implementation for efficient state-tuning of RWKV7 model
 - [Hardware Requirements](#hardware-requirements)
 - [Quick Start](#quick-start)
 - [Main Features](#main-features)
-- [Detailed Configuration](#detailed-configuration)
 - [GPU Support](#gpu-support)
 - [Citation](#citation)
 
@@ -94,22 +93,6 @@ python state_tuning_train.py --action train --data data.jsonl
 - **Loss Masking**: Supports loss masking for QA dialogue and padding
 - **Multi-Hardware Support**: RWKV-PEFT officially supports NVIDIA, AMD, Moore Threads, Musa, Iluvatar CoreX, and other hardware platforms. Ascend NPU implementation will be available later. Note: Currently we only support issues for NVIDIA hardware
 
-## Detailed Configuration
-
-
-
-
-### DeepSpeed Strategy
-```bash
---strategy deepspeed_stage_1
-```
-Available strategies:
-- deepspeed_stage_1: Preferred option
-- deepspeed_stage_2/3: For large models or full fine-tuning
-- deepspeed_stage_2_offload
-- deepspeed_stage_3_offload
-
-
 
 ## GPU Support
 
@@ -131,6 +114,7 @@ If you find this project helpful, please cite our work:
       url={https://arxiv.org/abs/2409.15371}, 
 
 }
+
 
 
 
