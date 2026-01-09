@@ -3,8 +3,8 @@
 RWKV7-Statetuning is an implementation for efficient state-tuning of RWKV7 models.
 
 # Recent updates
-## Support cuda state-tuning
-
+## Support cuda state-tuning RLVR
+RLVR_parallel
 
 
 
@@ -114,6 +114,7 @@ If you find this project helpful, please cite our work:
       url={https://arxiv.org/abs/2409.15371}, 
 
 }
+
 
 
 
