@@ -22,11 +22,6 @@ RLVR_parallel
 
 Below is the RWKV-7 model fine-tuned video memory requirement data, tested with RTX 4090 (24GB video memory) + 64GB RAM, based on the following parameter configurations:
 
-- Training precision: BF16
-- `--strategy deepspeed_stage_1`
-- `--ctx_len 1024`
-- `--micro_bsz 1`
-- `--lora_r 64` or `disha_config='{"mode":"bone","r":32}'`
 
 | Model Parameters | State Tuning | LoRA | DiSHA | PiSSA |
 |------------------|--------------|------|-------|-------|
@@ -88,7 +83,7 @@ python state_tuning_train.py --action train --data data.jsonl
 
 ## Main Features
 
-- **State-tuning Methods**: Supports LoRA, PISSA, Bone, State Tuning, etc.
+- **State-tuning Methods**: Supports Cuda
 - **Memory Optimization**: Multiple DeepSpeed strategies available
 - **Loss Masking**: Supports loss masking for QA dialogue and padding
 - **Multi-Hardware Support**: RWKV-PEFT officially supports NVIDIA, AMD, Moore Threads, Musa, Iluvatar CoreX, and other hardware platforms. Ascend NPU implementation will be available later. Note: Currently we only support issues for NVIDIA hardware
@@ -114,6 +109,7 @@ If you find this project helpful, please cite our work:
       url={https://arxiv.org/abs/2409.15371}, 
 
 }
+
 
 
 
